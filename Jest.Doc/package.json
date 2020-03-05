@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "test": "jest"
+    },
+    "dependencies": {
+        "jslint": "^0.12.1"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0"
+    }
+}
