@@ -1,1 +1,9 @@
-console.log('Hello NodeJS')
+//(function (exports, required) {
+  const chalk = require("chalk");
+  const text = require("./data");
+
+  console.log(chalk.blue(text));
+
+  console.log(__dirname)
+  console.log(__filename)
+//});
