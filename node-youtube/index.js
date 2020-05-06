@@ -1,4 +1,4 @@
-//(function (exports, required) {
+//(function (exports, require, module, __dirname, __filename) {
   const chalk = require("chalk");
   const text = require("./data");
 
