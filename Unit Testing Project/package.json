@@ -1,0 +1,21 @@
+{
+  "name": "unit-testing-project",
+  "version": "1.0.0",
+  "description": "a simple unit ttesting project using mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "mocha",
+    "unit",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-google": "^0.14.0",
+    "mocha": "^8.3.2"
+  }
+}
