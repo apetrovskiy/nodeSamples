@@ -1,0 +1,17 @@
+{
+  "name": "node_user_service",
+  "version": "1.0.0",
+  "description": "A simple Node.js REST API service for user data",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}

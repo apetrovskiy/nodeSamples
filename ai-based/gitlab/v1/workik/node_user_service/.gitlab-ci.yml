@@ -1,0 +1,37 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  image: node:16
+  script:
+    - npm install
+    - npm run lint
+    - docker build -t node_user_service .
+  artifacts:
+    paths:
+      - node_modules/
+      - package-lock.json
+      - package.json
+  only:
+    - master
+    - merge_requests
+
+test:
+  stage: test
+  image: node:16
+  before_script:
+    - docker run -d -p 3000:3000 --name user_service node_user_service
+  script:
+    - npm run test
+    - docker cp user_service:/app/tests/user_info.json ./tests/user_info.json
+  artifacts:
+    paths:
+      - tests/user_info.json
+  after_script:
+    - docker stop user_service
+    - docker rm user_service
+  only:
+    - master
+    - merge_requests
